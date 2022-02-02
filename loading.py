@@ -222,7 +222,7 @@ def create_df_produits(df_produits):
             "amazon_category_and_sub_category",
             "number_available_in_stock",
             "customer_questions_and_answers",
-            "sellers"
+            "sellers",
         ]
     )
     return df_produits
@@ -248,12 +248,11 @@ loading(fichier=df_reviews.iloc[:15000], index="reviews")
 print("ok reviews part 1")
 loading(fichier=df_reviews.iloc[15000:], index="reviews")
 print("ok reviews part 2")
-loading(fichier=df_questions, index="conversations")
-print("ok conversations")
+loading(fichier=df_questions, index="questions")
+print("ok questions")
 loading(fichier=df_vendeurs.iloc[:16000], index="vendeurs")
 print("ok vendeurs 1")
 loading(fichier=df_vendeurs.iloc[16000:], index="vendeurs")
 print("ok vendeurs 2")
 
-df_produits.info()
-df_produits.iloc[0]
+df_questions.columns
