@@ -1,0 +1,4 @@
+*.csv
+*.json
+*.sh
+old_req.py
