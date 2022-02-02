@@ -10,7 +10,6 @@ def exec(req):
     dff = pd.DataFrame(resu["values"], index=[x["name"] for x in resu["columns"]]).T
     return dff
 
-
 es = Elasticsearch()
 
 """
@@ -41,7 +40,7 @@ def produits_categories():
     req = """SELECT count(*) as nombre, categorie_1 
                 FROM produits 
                 GROUP BY categorie_1 ORDER BY nombre DESC"""
-    dff = exec(req)
+    dff = execjs(req)
     return dff
 
 

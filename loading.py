@@ -222,6 +222,7 @@ def create_df_produits(df_produits):
             "amazon_category_and_sub_category",
             "number_available_in_stock",
             "customer_questions_and_answers",
+            "sellers"
         ]
     )
     return df_produits
@@ -253,3 +254,6 @@ loading(fichier=df_vendeurs.iloc[:16000], index="vendeurs")
 print("ok vendeurs 1")
 loading(fichier=df_vendeurs.iloc[16000:], index="vendeurs")
 print("ok vendeurs 2")
+
+df_produits.info()
+df_produits.iloc[0]
